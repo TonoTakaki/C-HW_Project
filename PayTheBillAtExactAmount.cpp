@@ -4,7 +4,7 @@ using namespace std;
 
 
 int main() {
-int        n10Dollar, n20Dollar, n50Dollar, n100Dollar, n500Dollar, bill;
+int        n10Dollar, n20Dollar, n50Dollar, n100Dollar, n500Dollar, bill,temp, rest;
 int        c10, c20, c50, c100, c500;
 
 // Original number of coins in pocket
@@ -23,7 +23,7 @@ int original_money = n10Dollar + n20Dollar*2 + n50Dollar*5 + n100Dollar*10 + n50
 // Assume bill amount is a whole integer multiples of 10
 cout << "Bill Amount : "; cin >> bill;
 cout << endl;
-int bill = bill / 10;
+bill = bill / 10;
 
 // Fill in the code to calculate payment in terms of number of x-Dollar bills.
 // If not enough money, number of x-Dollar bills in payment should all be 0s.
@@ -32,8 +32,6 @@ int bill = bill / 10;
 
 // Second, we pay the bill from the largest value of face value of dollar
 // from 500-dollar to 10-dollar.
-
-int temp, rest;
 
 // If the the total money we have is not enough,
 // all numbers should be 0.
