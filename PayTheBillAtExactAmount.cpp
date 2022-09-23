@@ -112,7 +112,7 @@ else{
 		// For example, if the leftover is 10, and we have put in extra 1 50-Dollar bill
 		// and we still have 3 more 20-Dollar bills, we can take out 1 50-Dollar bill and
 		// put in extra 3 20-Dollar bills
-		if (n20Dollar >= 3 and c50 >= 1 and n20Dollar >= c20 + 2.5) {
+		if (n20Dollar >= 3 and c50 >= 1 and n20Dollar > c20 + 2.5) {
 			rest = rest + 5;
 			c50 = c50 - 1;
 			// It is important to add the former c20
@@ -124,7 +124,7 @@ else{
 		// it will put in 100 first, but if we don't have 10-Dollar bills,
 		// the outcomes will all be 0s. So we need to take out 1 100-Dollar bill,
 		// and reconsider the combination of 50 and 20-Dollar bills
-		if (n20Dollar >= 3 and c100 >= 1 and n50Dollar >= c50 + 1 and n20Dollar >= c20 + 2.5) {
+		if (n20Dollar >= 3 and c100 >= 1 and n50Dollar >= c50 + 1 and n20Dollar > c20 + 2.5) {
 			rest = rest + 5;
 			c100 = c100 - 1;
 			c50 = c50 + 1;
@@ -135,8 +135,6 @@ else{
 		}
 	}
 }
-
-// TODO
 
 cout << "Payment:" << endl;
 cout << "Number of 10-Dollar bills: " << c10 << endl;
