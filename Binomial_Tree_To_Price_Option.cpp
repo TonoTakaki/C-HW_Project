@@ -1,8 +1,3 @@
-//
-//  main.cpp
-//  BinomialTree
-//
-//
 
 #include <iostream>
 #include <math.h>
@@ -23,8 +18,8 @@ int CRRBinomialTree(
     double        maturity,                /* (I) maturity of option in years */
     double        vol,                    /* (I) annual volatility of underlying */
     double        rate,                    /* (I) annual continuous compounded discount rate */
-    int            nStep,                    /* (I) number of steps in tree */
-    double        *value)                    /* (O) option value */
+    int            nStep)                    /* (I) number of steps in tree */
+
 /*-----------------------------------------------------------------------------
 ** FUNCTION:    CRRBinomialTree.
 **
@@ -113,6 +108,8 @@ int CRRBinomialTree(
     return SUCCESS;
 }
 
+// Using this to verify the code
+// The answer should be 6.00
 int main() {
     cout << CRRBinomialTree(Put, American, 100, 100, 1, 0.2, 0.05, 10, 0) <<endl;
 }
