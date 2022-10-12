@@ -1,2 +1,2 @@
-# C-HW_Project
+# C++_HW_Project
 From C++ homework
